@@ -45,10 +45,104 @@ if(isset($_POST['submit'])){
     <div class="jumbotron">
         <h1 class="text-center">Savings Dashboard</h1>
         <h2 class="text-center">Your Current total saved is</h2>
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="icon-big icon-success text-center">
+                                    <i class="ti-wallet"></i>
+                                </div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="numbers">
+                                    <p>Revenue</p>
+                                    $1,345
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="icon-big icon-success text-center">
+                                    <i class="ti-wallet"></i>
+                                </div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="numbers">
+                                    <p>Revenue</p>
+                                    $1,345
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="icon-big icon-success text-center">
+                                    <i class="ti-wallet"></i>
+                                </div>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="numbers">
+                                    <p>Revenue</p>
+                                    $1,345
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 </head>
 <body>
-
+    <div class="row">
+        <div class="card col-4">
+            <div class="card-header">
+                <h2 class="card-title text-center">Christmas Savings</h2>
+                <div class="card-body">
+                    <div class="card-footer">   
+                    </div>        
+                </div>
+            </div>       
+        </div>
+        <div class="card col-4">
+            <div class="card-header">
+                <h2 class="card-title text-center">Holiday Savings</h2>
+                <div class="card-body">
+                    <form class="form-center">
+                        <input type="number" name="Hamount" placeholder="Save it">
+                        <br>
+                        <br>
+                        <input type="date" name="Sdate">
+                        <br>
+                        <br>
+                        <input type="text" name="who" placeholder="Who saved it?">
+                    </form>
+                            
+                </div>
+            </div>       
+        </div>
+        <div class="card col-4">
+            <div class="card-header">
+                <h2 class="card-title text-center">General Savings</h2>
+                <div class="card-body">        
+                </div>
+            </div>       
+        </div>
+    </div>
 
 </body>
 </html>
