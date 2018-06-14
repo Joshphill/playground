@@ -1,16 +1,14 @@
 <?php
 
 session_start();
-if(!isset($_SESSION['total']))
+
+if(empty($_SESSION['total']))
     $_SESSION['total'] = 0;
 
-$total = $_SESSION['total'];
-
 if(isset($_POST['submit'])){
-    $amount = $_POST['amount'];
-    $total += $amount;
+    $total = $_SESSION['total'];
+    $total = $total + $_POST['Camount'];
     $_SESSION['total'] = $total;
-    $date = $_POST['amountDate'];
 }
 
 
@@ -77,7 +75,7 @@ if(isset($_POST['submit'])){
                             <div class="col-xs-8">
                                 <div class="numbers">
                                     <p>Revenue</p>
-                                    $1,345
+                                    <?php echo $total ?>
                                 </div>
                             </div>
                         </div>
@@ -112,9 +110,17 @@ if(isset($_POST['submit'])){
         <div class="card col-4">
             <div class="card-header">
                 <h2 class="card-title text-center">Christmas Savings</h2>
-                <div class="card-body">
-                    <div class="card-footer">   
-                    </div>        
+                <div class="card-body"> 
+                    <form action="" class="form-center" method="post">
+                        <input type="number" name="Camount" placeholder="Save it">
+                        <br>
+                        <br>
+                        <input type="date" name="Cdate">
+                        <br>
+                        <br>
+                        <input type="text" name="who" placeholder="Who saved it?">
+                        <input type="submit" name="submit">
+                    </form>      
                 </div>
             </div>       
         </div>
@@ -122,14 +128,15 @@ if(isset($_POST['submit'])){
             <div class="card-header">
                 <h2 class="card-title text-center">Holiday Savings</h2>
                 <div class="card-body">
-                    <form class="form-center">
+                    <form action="" class="form-center" method="post">
                         <input type="number" name="Hamount" placeholder="Save it">
                         <br>
                         <br>
-                        <input type="date" name="Sdate">
+                        <input type="date" name="Hdate">
                         <br>
                         <br>
                         <input type="text" name="who" placeholder="Who saved it?">
+                        <input type="submit" name="submit">
                     </form>
                             
                 </div>
@@ -138,7 +145,17 @@ if(isset($_POST['submit'])){
         <div class="card col-4">
             <div class="card-header">
                 <h2 class="card-title text-center">General Savings</h2>
-                <div class="card-body">        
+                <div class="card-body">  
+                    <form action="" class="form-center" method="">
+                        <input type="number" name="Gamount" placeholder="Save it">
+                        <br>
+                        <br>
+                        <input type="date" name="Cdate">
+                        <br>
+                        <br>
+                        <input type="text" name="who" placeholder="Who saved it?">
+                        <input type="submit" name="submit">
+                    </form>      
                 </div>
             </div>       
         </div>
